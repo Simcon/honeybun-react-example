@@ -4,9 +4,9 @@ import * as ReactDOM from "react-dom";
 import { AuthProvider, useAuth } from "../src/.";
 
 const oidcConfig = {
-    authority: "https://auth.honeybun.io/",
-    client_id: "CLIENT_ID",
-    redirect_uri: "http://localhost:1234",
+    authority: process.env.AUTHORITY,
+    client_id: process.env.CLIENT_ID,
+    redirect_uri: process.env.REDIRECT_URI,
 };
 
 function App() {

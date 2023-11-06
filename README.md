@@ -4,6 +4,20 @@ This is an example React application with Honeybun OIDC integration.
 
 It is based on https://github.com/authts/react-oidc-context
 
+It can be run from Docker or direct.
+
+## Run from Docker
+
+`docker build . -t [IMAGENAME]`
+
+`docker run --name [CONTAINER NAME] -e AUTHORITY=[AUTHORITY] -e CLIENT_ID=[CLIENT ID] -e REDIRECT_URI=[REDIRECT URI] -p 127.0.0.1:1234:1234 [IMAGENAME]`
+
+Browse to http://localhost:1234
+
+**IF YOU SEE AN ERROR IN THE BROWSER REFER TO THE TROUBLESHOOTING NOTES BELOW.**
+
+## Run direct
+
 From the root folder install the source packages:
 
 `npm install`
@@ -26,7 +40,9 @@ Start the example app and try logging in:
 
 `npm run start`
 
-If you see an error check the browser developer tools.
+## Troubleshooting
+
+**IF YOU SEE AN ERROR IN THE BROWSER CHECK THE DEVELOPER TOOLS.**
 
 If the error is related to CORS then try testing with Chrome web security disabled.
 
